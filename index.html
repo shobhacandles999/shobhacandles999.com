@@ -167,6 +167,89 @@ input,select,textarea{background:#fffdf8!important;color:#171a15!important;borde
  .btn{padding:10px 16px}
 }
 
+
+/* Responsive refinements: phone, tablet, laptop and wide screens */
+html { -webkit-text-size-adjust: 100%; }
+body { min-width: 320px; }
+button, input, textarea, select { max-width: 100%; }
+.w { width: min(1180px, calc(100% - 40px)); }
+.hero .w, .ab, .cg { min-width: 0; }
+.hero .w > *, .ab > *, .cg > *, footer .w > * { min-width: 0; }
+nav { flex-wrap: wrap; }
+.grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (min-width: 1200px) {
+  .w { width: min(1180px, calc(100% - 64px)); }
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+}
+@media (max-width: 1024px) {
+  .w { width: min(100% - 36px, 960px); }
+  header .w { gap: 12px; }
+  .br { max-width: 52%; }
+  .br span { font-size: 13px; }
+  nav { gap: 12px; font-size: 13px; }
+  .hero .w { gap: 26px; }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  section { padding: 58px 0; }
+}
+@media (max-width: 800px) {
+  header .w { min-height: 66px; height: auto; flex-wrap: nowrap; padding: 9px 0; }
+  .br { max-width: calc(100% - 54px); }
+  .br img { width: 38px; height: 38px; flex: 0 0 auto; }
+  .br span { display: inline; white-space: normal; line-height: 1.15; }
+  #mb { flex: 0 0 42px; }
+  nav { width: auto; margin: 0; overflow: visible; white-space: normal; }
+  .hero .w, .ab, .cg, footer .w { grid-template-columns: minmax(0, 1fr); }
+  .hero .w { gap: 28px; }
+  .hero { padding-top: 18px; }
+  .hero h1 { font-size: clamp(38px, 8vw, 60px); }
+  .hi { max-width: 680px; width: 100%; margin-inline: auto; }
+  .stats { gap: 10px; }
+  .stats div { padding: 20px 8px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cg { gap: 18px; }
+  footer .w { gap: 22px; }
+  section { padding: 44px 0; }
+}
+@media (max-width: 480px) {
+  .w { width: calc(100% - 28px); }
+  header .w { min-height: 60px; }
+  .br { gap: 7px; }
+  .br img { width: 32px; height: 32px; }
+  .br span { font-size: 12px; letter-spacing: .025em; }
+  nav { top: 60px; max-height: calc(100dvh - 60px); overflow-y: auto; }
+  .hero .w { padding-top: 26px; padding-bottom: 26px; }
+  .hero h1 { font-size: clamp(35px, 10vw, 48px); }
+  .hero .t { font-size: 21px; }
+  .hero p { font-size: 14px; }
+  h2 { font-size: clamp(28px, 8vw, 36px); }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .card { border-radius: 12px; }
+  .card .b { padding: 10px; gap: 5px; }
+  .card h3 { font-size: 16px; }
+  .card p { font-size: 12px; }
+  .card .btn { padding: 8px 7px; font-size: 12px; }
+  .tiles { gap: 10px; }
+  .tile { border-radius: 12px; }
+  .tile span { font-size: 18px; padding: 28px 10px 10px; }
+  .stats b { font-size: 28px; }
+  .stats div { font-size: 12px; padding: 16px 5px; }
+  .cl div { padding: 12px; }
+  .hr { padding: 14px; }
+  .hr p { font-size: 13px; }
+  .act { gap: 6px; padding: 7px; }
+  .act a { padding: 10px 8px; font-size: 12px; }
+  dialog { padding: 22px 16px; }
+  footer { padding-bottom: 92px; }
+}
+@media (max-width: 350px) {
+  .br span { max-width: 165px; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: 1fr; }
+  .hero .b .btn { padding: 9px 12px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
